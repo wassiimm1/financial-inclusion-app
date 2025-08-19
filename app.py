@@ -2,8 +2,8 @@ import streamlit as st
 import pickle
 import numpy as np
 
-model = pickle.load(open('model (1).pkl',"rb"))
-scaler = pickle.load(open("scaler (1).pkl","rb"))
+randforst = pickle.load(open('randforst.pkl',"rb"))
+standardscale = pickle.load(open("standardscale.pkl","rb"))
 
 st.title("FINANCIAL INCLUSION PREDICTION ")
 feature1 = st.number_input("INSERT YOUR YEAR OF INTERVIEW")
@@ -108,11 +108,11 @@ elif job_type == 'Remittance Dependent':
 elif job_type == 'Self employed':
     job_type_Self_employed = 1
 
-if st.button("Predict Churn"):
+if st.button("Predict"):
     features = np.array([[feature1,feature2,feature3,feature4,feature5,feature6,country_Kenya,country_Rwanda ,country_Tanzania,country_Uganda,location_type_Rural,location_type_Urban,cellphone_access_No,cellphone_access_Yes,gender_of_respondent_Female,gender_of_respondent_Male,job_type_Dont_Know_Refuse_to_answer,job_type_Farming_and_Fishing,job_type_Formally_employed_Government,job_type_Formally_employed_Private,job_type_Government_Dependent,job_type_Informally_employed,job_type_No_Income,job_type_Other_Income,job_type_Remittance_Dependent,job_type_Self_employed]])
-    features_scaled = scaler.transform(features)
-    prediction = model.predict(features_scaled)
+    features_scaled = standardscale.transform(features)
+    prediction = randforst.predict(features_scaled)
     if prediction[0] == 1:
         st.success("you are likely to have a bank account")
     else :
-        st.error('you areprobably dont have a bank account')                     
+        st.error('you are probably dont have a bank account')                     

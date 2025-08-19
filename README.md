@@ -9,6 +9,6 @@ It is based on the **Financial Inclusion in Africa** dataset provided by ZindiIt
 - Training a classification model
 - Interactive Streamlit web app for predictions
 - Deployed on Streamlit Cloud
-## 🔹 How to Run Locally
+## 🔹 Click below to try the web app
 🚀 [Click here to try the live app](https://financial-inclusion-app-92jvn86blumsovqo4hyvkg.streamlit.app/)
 

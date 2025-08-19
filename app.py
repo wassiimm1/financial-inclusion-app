@@ -1,6 +1,5 @@
 import streamlit as st
 import pickle
-import numpy as np
 
 randforst = pickle.load(open('randforst.pkl',"rb"))
 standardscale = pickle.load(open("standardscale.pkl","rb"))

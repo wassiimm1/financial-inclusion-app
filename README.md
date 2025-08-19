@@ -10,5 +10,5 @@ It is based on the **Financial Inclusion in Africa** dataset provided by ZindiIt
 - Interactive Streamlit web app for predictions
 - Deployed on Streamlit Cloud
 ## 🔹 Click below to try the web app
-🚀 [Click here to try the live app](https://financial-inclusion-app-92jvn86blumsovqo4hyvkg.streamlit.app/)
+🚀 [Click here to try the live app](https://financial-inclusion-app-8bz49trhtvgpng2d4tzjmw.streamlit.app/)
 

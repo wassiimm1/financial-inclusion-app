@@ -10,8 +10,5 @@ It is based on the **Financial Inclusion in Africa** dataset provided by ZindiIt
 - Interactive Streamlit web app for predictions
 - Deployed on Streamlit Cloud
 ## 🔹 How to Run Locally
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/wassiimm1/financial-inclusion-app.git
-   cd financial-inclusion-app
+🚀 [Click here to try the live app](https://financial-inclusion-app-92jvn86blumsovqo4hyvkg.streamlit.app/)
 

@@ -3,8 +3,8 @@ import numpy as np
 import pickle
 
 # Load model + scaler
-randforst = pickle.load(open('randforst.pkl', "rb"))
-standardscale = pickle.load(open("standardscale.pkl", "rb"))
+model = pickle.load(open('stackedmodel.pkl', "rb"))
+standardscale = pickle.load(open("scalerr.pkl", "rb"))
 
 st.title("FINANCIAL INCLUSION PREDICTION")
 
@@ -104,7 +104,7 @@ if st.button("Predict"):
                           job_type_Remittance_Dependent, job_type_Self_employed]])
 
     features_scaled = standardscale.transform(features)
-    prediction = randforst.predict(features_scaled)
+    prediction = model.predict(features_scaled)
 
     if prediction[0] == 1:
         st.success("✅ You are likely to have a bank account")
